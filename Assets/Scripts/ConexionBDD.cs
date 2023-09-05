@@ -1,36 +1,41 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
+using System.Data;
+using System.Data.SqlClient;
 using UnityEngine;
-using System.data.sqlClient;  
-using system.data;
-using system.net;
 
-namespace ConexionBDD
+public class DatabaseManager : MonoBehaviour
 {
-   public static class BD
-   {
-      private static List<Usuario> _ListadoUsuarios = new List<Usuario>();
-      private static List<Pregunta> _ListadoPreguntas = new List<Pregunta>();
-      private static List<Personajes> _ListadoPreguntas = new List<Personajes>();
-      private static List<CategoriasPreguntas> _ListadoCategoriasPreguntas = new List<ListadoCategoriasPreguntas>();
-      private static List<Caracteristicas> _ListadoCaracteristicas = new List<Caracteristicas>();
+    private string connectionString = "Server=yourServer;";
 
-      private static string _connectionString = @"Server= A-PHZ2-CIDI-007
-      Database=Database;Trusted_Connection=true;"//modificar para que quede bien
-   }
+    void Start()
+    {
+        SqlConnection connection = new SqlConnection(connectionString);
 
-   public static List<CategoriasPreguntas> obtenerCategoria(){
-      using(SqlConnection db = new SqlConnection(_connectionString))
-      {
-         string sql = "SELECT * FROM CategoriasPregunta";
-         -ListadoCategoriasPreguntas = db.Query<CateogoriasPreguntas>(sql).AsList();
-      }
-      return _ListadoCategoriasPreguntas;
-   }
+        try
+        {
+            connection.Open();
+            Debug.Log("Conexión exitosa");
 
+            // Ejecutar una consulta
+            string query = "SELECT * from Personajes ORDER BY NEWID() Limit 2";
+            SqlCommand command = new SqlCommand(query, connection);
 
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string dato = reader.GetString(0); // Ejemplo: obtén la primera columna como una cadena
+                Debug.Log(dato);
+            }
 
-
-
-
+            reader.Close();
+        }
+        catch (Exception e)
+        {
+            Debug.LogError("Error de conexión: " + e.Message);
+        }
+        finally
+        {
+            connection.Close();
+        }
+    }
 }
