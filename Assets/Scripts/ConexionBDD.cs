@@ -1,11 +1,14 @@
 using System;
 using System.Data;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using UnityEngine;
+using UnityEngine.UI;
+using Dapper;
 
 public class DatabaseManager : MonoBehaviour
 {
-    private string connectionString = "Server=yourServer;";
+    private string connectionString = "Server=A-PHZ2-AMI-003;"/*cambiar al server de cada compu*/;
 
     void Start()
     {
@@ -25,7 +28,7 @@ public class DatabaseManager : MonoBehaviour
             {
                 string dato = reader.GetString(0); // Ejemplo: obtén la primera columna como una cadena
                 Debug.Log(dato);
-            }
+            }   
 
             reader.Close();
         }
