@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class DatabaseManager : MonoBehaviour
 {
-    private string connectionString = "Server=A-PHZ2-AMI-003;"/*cambiar al server de cada compu*/;
+    private string connectionString = "Server=A-PHZ2-CIDI-053;"/*cambiar al server de cada compu*/;
 
     void Start()
     {
@@ -21,6 +21,8 @@ public class DatabaseManager : MonoBehaviour
             // Ejecutar una consulta
             string query = "SELECT * from Personajes ORDER BY NEWID() Limit 2";
             SqlCommand command = new SqlCommand(query, connection);
+            Debug.Log(query);
+           
 
             SqlDataReader reader = command.ExecuteReader();
             while (reader.Read())
