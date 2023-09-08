@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using UnityEngine;
 using UnityEngine.UI;
-using Dapper;
 
 public class DatabaseManager : MonoBehaviour
 {
@@ -39,6 +38,6 @@ public class DatabaseManager : MonoBehaviour
         finally
         {
             connection.Close();
-        }
-    }
+        }
+    }
 }
