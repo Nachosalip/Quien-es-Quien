@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Personaje2D
+public class Personaje2D : MonoBehaviour
 {
     public string Nombre { get; set; }
     public string Accesorios { get; set; }
