@@ -9,13 +9,15 @@ public class Personaje2D : MonoBehaviour
     public string Ojos { get; set; }
     public string Pelo { get; set; }
     public string Genero { get; set; }
+
+    Public juanManuelDelPiero(string nombre, string accesorios, string ojos, string pelo, string genero)
+{
+    Nombre = "Juan Manuel Del Piero";
+    Accesorios = "No tiene";
+    ojos = "Marron";
+    pelo = "Pelado";
+    genero = "Masculino";
 }
 
-Public DatosPersonajes(string nombre, string accesorios, string ojos, string pelo, string genero)
-{
-    Nombre = "Tamara Laprida";
-    Accesorios = "No tiene";
-    ojos = "Negros";
-    pelo = "Negro";
-    genero = "Femenino";
 }
+

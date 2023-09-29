@@ -9,9 +9,8 @@ public class Preguntas : MonoBehaviour
     public string Pregunta3 { get; set; }
     public string Pregunta4 { get; set; }
 
-}
 
-Public PreguntasPelo(string Pregunta1, string Pregunta2, string Pregunta3)
+    Public PreguntasPelo(string Pregunta1, string Pregunta2, string Pregunta3)
 {
     Pregunta1 = "¿Tu personaje tiene el pelo rubio?";
     Pregunta2 = "¿Tu personaje es pelado?";
@@ -36,5 +35,8 @@ Public PreguntasAccesorios(string Pregunta1)
 {
     Pregunta1 = "¿Tu personaje tiene anteojos?";
 }
+}
+
+
 
     
