@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Personaje2D : MonoBehaviour
+public class JuanManuelDelPiero : MonoBehaviour
 {
     public string Nombre { get; set; }
     public string Accesorios { get; set; }
@@ -10,7 +10,7 @@ public class Personaje2D : MonoBehaviour
     public string Pelo { get; set; }
     public string Genero { get; set; }
 
-    Public juanManuelDelPiero(string nombre, string accesorios, string ojos, string pelo, string genero)
+    public void juanManuelDelPiero(string nombre, string accesorios, string ojos, string pelo, string genero)
 {
     Nombre = "Juan Manuel Del Piero";
     Accesorios = "No tiene";

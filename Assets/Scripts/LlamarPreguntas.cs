@@ -1,17 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-Public class TraerPreguntas : MonoBehaviour
+public class traerPreguntas : MonoBehaviour
 {
-    public void CambiarTexto(string nuevoTexto)
+  public Text textoAparecer;
+
+    public void MostrarTexto()
     {
-        textoUI.text = nuevoTexto;
-    }
-    
-    public LlamarPregunta()
-    {
-        string datos = PreguntasPelo();
-        
+        textoAparecer.text = "¡Hola, mundo!";
     }
 }
