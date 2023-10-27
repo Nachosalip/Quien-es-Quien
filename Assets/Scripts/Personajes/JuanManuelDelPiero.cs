@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class JuanManuelDelPiero : MonoBehaviour
 {
+    public int id {get; set; }
     public string Nombre { get; set; }
     public string Accesorios { get; set; }
     public string Ojos { get; set; }
@@ -12,6 +13,7 @@ public class JuanManuelDelPiero : MonoBehaviour
 
     public void juanManuelDelPiero(string nombre, string accesorios, string ojos, string pelo, string genero)
 {
+    id = 3;
     Nombre = "Juan Manuel Del Piero";
     Accesorios = "No tiene";
     ojos = "Marron";

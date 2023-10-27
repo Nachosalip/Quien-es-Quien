@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BlasZanetti : MonoBehaviour
 {
+    public int id {get; set; }
     public string Nombre { get; set; }
     public string Accesorios { get; set; }
     public string Ojos { get; set; }
@@ -12,6 +13,7 @@ public class BlasZanetti : MonoBehaviour
 
     public void blasZanetti(string nombre, string accesorios, string ojos, string pelo, string genero)
 {
+    id = 1;
     Nombre = "Blas Zanetti";
     Accesorios = "No tiene";
     ojos = "Celeste";
